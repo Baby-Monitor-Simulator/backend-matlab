@@ -25,4 +25,4 @@ https://github.com/users/WinteryFox/projects/1
 | ----------- | ----------- | ----------- |
 | master | **Main Branch** | *master* |
 | FEATURE_{{custom_feature_branch_name}} | **Feature Branch** | *FEATURE_WebUserInterface* |
-| US{{issue_number}}_{{issue_title_name}} | **Feature Branch** | *US13_SliderToManipulateFHR* |
+| US{{issue_number}}_{{issue_title_name}} | **user Story Branch** | *US13_SliderToManipulateFHR* |
