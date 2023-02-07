@@ -18,7 +18,7 @@ __This project will be able to improve the decision making of healthcare profess
 **The project is primarily aimed at providing a tool for healthcare professional to train their CTG interpretation skills on.**
 
 ### Key Points: 
-- The mathematical has already been fully developed in MATLAB.
+- The mathematical model has already been fully developed in MATLAB.
   - Fully functional for research users 
   - NOT functional for clinical users 
 
