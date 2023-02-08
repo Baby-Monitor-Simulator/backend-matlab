@@ -12,6 +12,8 @@ assignees: ''
 [minimal description]
 
 ## Acceptance Criteria
+[expected result of implementing the ticket expressed as concrete goals]
+
 - 
 - 
 - 
