@@ -3,7 +3,7 @@ This is a group project for Fontys and the Eindhoven University of Technology.
 
 ## Links
 - Scrum Board: https://github.com/users/WinteryFox/projects/1/
-- Contributing Rules: https://github.com/WinteryFox/S6BabyMonitor/blob/master/TICKETS.md
+- Contributing Rules: https://github.com/WinteryFox/S6BabyMonitor/wiki/Contributing-Rules
 
 ## Context
 A technique, known as Cardiotocography (CTG), can be used to monitor the fetal heartbeat and the uterine contractions during pregnancy and labour. The interpretation of CTGs can be difficult, with healthcare professionals needing extensive training, to correctly determine the results of a CTG (whether the baby is at risk and proactive action needs to be taken for example). 
