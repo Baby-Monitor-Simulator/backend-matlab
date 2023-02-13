@@ -36,7 +36,8 @@ __This project will be able to improve the decision making of healthcare profess
   - **pO2** – *Fetal Blood* (ONLY SIMULATOR) 
   - **MAP** – *Fetal Blood Pressure* (ONLY SIMULATOR) 
   - **FHR** – *Fetal Heart Rate* (ALWAYS AVAILABLE) 
-  - **UP** – *Uterine Contractions* (ALWAYS AVAILABLE) 
+  - **UP** – *Uterine Contractions* (ALWAYS AVAILABLE)
+  - `TODO: Missing Variables`
 
 Since some variables are only available in simulator, these should also be more prominent in our UI. These variables can affect each other. **FHR** & **UP** are what form the **CTG**.
 
