@@ -13,7 +13,6 @@ assignees: ''
 
 ## Acceptance Criteria
 [expected result of implementing the ticket expressed as concrete goals]
-
 - 
 - 
 - 
@@ -23,7 +22,7 @@ assignees: ''
 [short description of how with the goals above you will reach the solution]
 
 ## Implemented Solution
-[the actual solutiol to be filled in after development]
+[the actual solution to be filled in after development]
 
 ## Attention Points
 [any misc. stuff to note]
