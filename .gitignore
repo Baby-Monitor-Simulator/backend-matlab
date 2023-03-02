@@ -1,3 +1,7 @@
+### Custom
+*.idea/inspectionProfiles
+.idea/
+
 ### Java template
 # Compiled class file
 *.class
@@ -152,3 +156,4 @@ gradle-app.setting
 hs_err_pid*
 replay_pid*
 
+/.idea/
