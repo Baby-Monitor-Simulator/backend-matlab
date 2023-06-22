@@ -55,6 +55,7 @@ fun Application.application() {
 
             route("/sse") {
                 get {
+                    // TODO: Use session to generate data specific to each client
                     val session = call.sessions.getOrSet { Session(UUID.randomUUID().toString(), 0, 0, 0, 0, 0) }
 
                     call.response.cacheControl(CacheControl.NoCache(null))
@@ -65,9 +66,12 @@ fun Application.application() {
                                 val start = Instant.now().toEpochMilli()
                                 var now = start
 
-                                while (true) { // TODO: Exit when client disconnects
-                                    val fetalBlood = Random().nextInt(120)
-
+                                // This loop will error out when the channel closes (client closes the page) so
+                                // it is safe to use a while true loop here.
+                                while (true) {
+                                    // Note: Ktor currently doesn't natively support SSE, so this is the way we're working
+                                    // around that deficiency for now. Supposedly, it was planned to be added in the next
+                                    // release. Once it is, this should probably use whatever native support they add instead.
                                     write(
                                         "data: " + Json.encodeToString(
                                             GraphData(
@@ -87,6 +91,7 @@ fun Application.application() {
                             }
                         }
                     } catch (ignored: ChannelWriteException) {
+                        // User closed the page or otherwise disconnected.
                     }
                 }
             }
