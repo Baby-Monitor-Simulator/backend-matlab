@@ -8,7 +8,7 @@ plugins {
     kotlin("jvm")
     kotlin("plugin.serialization")
     id("io.ktor.plugin")
-    application
+    sources
 }
 
 group = "org.fontys"
@@ -42,12 +42,4 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(19)
-}
-
-application {
-    mainClass.set("org.fontys.MainKt")
 }

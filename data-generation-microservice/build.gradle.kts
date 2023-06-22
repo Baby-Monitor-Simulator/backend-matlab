@@ -6,7 +6,8 @@ val jansi_version: String by project
 
 plugins {
     kotlin("jvm")
-    application
+    kotlin("plugin.serialization")
+    id("io.ktor.plugin")
 }
 
 group = "org.fontys"
@@ -39,12 +40,4 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(8)
-}
-
-application {
-    mainClass.set("MainKt")
 }
