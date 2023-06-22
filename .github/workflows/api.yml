@@ -1,0 +1,94 @@
+name: Api
+
+on:
+  push:
+    paths:
+      - 'api/**'
+      - 'buildSrc/**'
+      - 'gradle/**'
+      - '.github/workflows/api.yml'
+    branches: [ master ]
+    tags-ignore:
+      - '*.*'
+  pull_request:
+    paths:
+      - 'api/**'
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  build:
+    name: Build for JDK ${{ vars.JAVA_VERSION }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK ${{ vars.JAVA_VERSION }}
+        uses: actions/setup-java@v3
+        with:
+          distribution: corretto
+          java-version: ${{ vars.JAVA_VERSION }}
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts') }}
+          restore-keys: ${{ runner.os }}-gradle-
+
+      - name: Build
+        run: ./gradlew api:clean api:build
+
+      - name: Run tests
+        run: ./gradlew api:test
+
+#  The publish and deploy jobs can easily be uncommented once a Docker Hub or some other registry
+#  account has been made. This also deploys to Azure AKS automatically.
+
+#  publish:
+#    name: Publish artifacts
+#    runs-on: ubuntu-latest
+#    if: github.event_name != 'pull_request'
+#    needs: build
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - uses: actions/cache@v3
+#        with:
+#          path: ~/.gradle/caches
+#          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+#          restore-keys: |
+#            ${{ runner.os }}-gradle-
+#
+#      - name: Build and push image
+#        env:
+#          IMAGE_TAG: ${{ github.sha }}
+#        run: ./gradlew api:jib -Djib.to.image=babysim/api -Djib.to.auth.username=${{ secrets.DOCKER_USERNAME }} -Djib.to.auth.password=${{ secrets.DOCKER_ACCESS_TOKEN }}
+#
+#  deploy:
+#    name: Deploy to Kubernetes cluster
+#    runs-on: ubuntu-latest
+#    needs: publish
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - name: Azure login
+#        uses: azure/login@v1
+#        with:
+#          creds: ${{ secrets.AZURE_CREDENTIALS }}
+#
+#      - name: Get Kubernetes context
+#        uses: azure/aks-set-context@v3
+#        with:
+#          resource-group: babysim
+#          cluster-name: babysim
+#
+#      - name: Deploy application
+#        uses: azure/k8s-deploy@v4
+#        with:
+#          manifests: ./docker/kubernetes/api
+#          action: deploy
+#          strategy: basic
+#          pull-images: false
