@@ -27,9 +27,7 @@ fun main(args: Array<String>): Unit = EngineMain.main(args)
 fun Application.application() {
     install(AutoHeadResponse)
     install(ContentNegotiation) {
-        json(Json {
-            encodeDefaults = false
-        })
+        json(Json)
     }
     install(Sessions) {
         cookie<Session>("session") {
