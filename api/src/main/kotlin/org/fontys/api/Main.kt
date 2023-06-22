@@ -1,4 +1,4 @@
-package org.fontys
+package org.fontys.api
 
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
@@ -15,9 +15,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import org.fontys.json.GraphData
-import org.fontys.json.Session
-import org.fontys.json.SettingsPatch
+import org.fontys.api.json.GraphData
+import org.fontys.api.json.Session
+import org.fontys.api.json.SettingsPatch
 import java.time.Instant
 import java.util.*
 import kotlin.time.Duration

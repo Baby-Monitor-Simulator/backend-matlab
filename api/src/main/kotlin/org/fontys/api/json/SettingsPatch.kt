@@ -1,7 +1,6 @@
-package org.fontys.json
+package org.fontys.api.json
 
-data class Session(
-    val id: String,
+data class SettingsPatch(
     val fetalHeartRate: Short,
     val fetalBloodSaturation: Short,
     val fetalBloodPressure: Short,

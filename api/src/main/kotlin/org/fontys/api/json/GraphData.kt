@@ -1,4 +1,4 @@
-package org.fontys.json
+package org.fontys.api.json
 
 import kotlinx.serialization.Serializable
 

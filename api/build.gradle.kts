@@ -40,6 +40,16 @@ dependencies {
     runtimeOnly("org.fusesource.jansi:jansi:$jansi_version")
 }
 
+project.setProperty("mainClassName", "$group.$name.MainKt")
+
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "$group.$name.MainKt"
+        )
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
