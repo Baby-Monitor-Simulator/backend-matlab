@@ -1,13 +1,6 @@
 # Baby Monitor Simulator Project
 This is a group project for Fontys and the Eindhoven University of Technology.
 
-## Links
-- Scrum Board: https://github.com/orgs/Baby-Monitor-Simulator/projects/1 [**includes** shared tasks]
-- Frontend Links:
-  - Scrum Board Frontend: https://github.com/orgs/Baby-Monitor-Simulator/projects/3 [does **NOT** include shared tasks]
-  - Repository Frontend: https://github.com/Baby-Monitor-Simulator/s6-baby-monitor-simulator-webui
-- Contributing Rules: https://github.com/Baby-Monitor-Simulator/S6BabyMonitor/wiki/Contributing-Rules
-
 ## Dependencies
 ### Adding Matlab Engine to Project:
 This should be handled automatically by Gradle. If using other package managers, the instructions below may help:
