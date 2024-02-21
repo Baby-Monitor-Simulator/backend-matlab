@@ -1,6 +1,11 @@
 # Baby Monitor Simulator Project
 This is a group project for Fontys and the Eindhoven University of Technology.
 
+# Running
+> Run **API Main.kt** function after completing setup below: https://github.com/Baby-Monitor-Simulator/backend-matlab/blob/master/api/src/main/kotlin/org/fontys/api/Main.kt
+
+With _IntelliJ Idea_ you can simply right-click on the function and run or run via the play button top-right.
+
 # Setup
 > Setup primarily designed for _IntelliJ Idea_ (Fontys provides a free license for all students).
 
