@@ -2,6 +2,8 @@
 This is a group project for Fontys and the Eindhoven University of Technology.
 
 # Setup
+> Setup primarily designed for _IntelliJ Idea_ (Fontys provides a free license for all students).
+
 ## Java
 Use version **11**:
 ![Java Version Command-Line](https://github.com/Baby-Monitor-Simulator/backend-matlab/assets/83029234/4d5c4560-c9b2-46dc-ba4a-7eb983c6341d)
