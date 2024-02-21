@@ -8,14 +8,15 @@ Use version **11**:
 
 Additionally, _IntelliJ Idea_ lets you easily configure JVM of project in its settings:
 
-## Dependencies
-### Adding Matlab Engine to Project:
-This should be handled automatically by Gradle. If using other package managers, the instructions below may help:
-
 1. ![image](https://github.com/Baby-Monitor-Simulator/backend-matlab/assets/83029234/5c3c8492-6f0f-40b0-b267-871e76cd0cce)
 2. ![image](https://github.com/Baby-Monitor-Simulator/backend-matlab/assets/83029234/7d6364e7-a961-4ba1-93bd-091fc783bebf)
 
 Download the JDK if missing: ![image](https://github.com/Baby-Monitor-Simulator/backend-matlab/assets/83029234/fc807474-f9bb-4500-a6ee-cb451da2828b)
+
+## Dependencies
+### Adding Matlab Engine to Project:
+This should be handled automatically by Gradle. If using other package managers, the instructions below may help:
+
 
 
 _IntelliJ Idea Instructions_:
