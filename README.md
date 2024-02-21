@@ -17,12 +17,13 @@ Download the JDK if missing: ![image](https://github.com/Baby-Monitor-Simulator/
 ### Adding Matlab Engine to Project:
 This should be handled automatically by Gradle. If using other package managers, the instructions below may help:
 
-
-
 _IntelliJ Idea Instructions_:
 - File -> Project Structure
 - Libraries
 - Click on + to add library
 - Add `engine.jar` probably here: `C:\Program Files\MATLAB\R2022b\extern\engines\java\jar`
+  - For convenience, we have placed the library file in the repo if you cannot find it locally: https://github.com/Baby-Monitor-Simulator/backend-matlab/tree/master/lib  
 - Select all projects
+
+For other IDEs I am not familiar. If you do it, please document it here!
 
