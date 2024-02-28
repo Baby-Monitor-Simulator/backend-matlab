@@ -65,12 +65,12 @@ fun Application.application() {
                                 var now = start
 
                                 // This loop will error out when the channel closes (client closes the page) so
-                                // it is safe to use a while true loop here.
+                                // it is safe to use while true loop here.
                                 while (true) {
                                     // Note: Ktor currently doesn't natively support SSE, so this is the way we're working
                                     // around that deficiency for now. Supposedly, it was planned to be added in the next
                                     // release. Once it is, this should probably use whatever native support they add instead.
-                                    write(
+                                    write(  // TODO: Replace this with Matlab data and not just random values as printed below
                                         "data: " + Json.encodeToString(
                                             GraphData(
                                                 now - start,
