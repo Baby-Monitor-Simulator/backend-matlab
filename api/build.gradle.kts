@@ -32,6 +32,8 @@ dependencies {
     implementation("io.ktor:ktor-server-auto-head-response-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-sessions:$ktor_version")
 
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
+
     implementation(project(mapOf("path" to ":data-generation-microservice")))
 
     testImplementation(kotlin("test"))

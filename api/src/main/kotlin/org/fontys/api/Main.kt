@@ -6,6 +6,7 @@ import io.ktor.server.application.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.autohead.*
 import io.ktor.server.plugins.contentnegotiation.*
+import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.server.sessions.*
@@ -25,6 +26,10 @@ import kotlin.time.Duration
 fun main(args: Array<String>): Unit = EngineMain.main(args)
 
 fun Application.application() {
+    install(CORS) {
+        allowHost("localhost:4173")
+        allowHeader(HttpHeaders.AccessControlAllowHeaders)
+    }
     install(AutoHeadResponse)
     install(ContentNegotiation) {
         json(Json)
