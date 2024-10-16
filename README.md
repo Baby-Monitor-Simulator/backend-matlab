@@ -53,14 +53,18 @@ Once initial setup is complete, you can begin developing with Docker Compose. He
    
    cd C:\Users\<YourUsername>\Desktop\microservices-dev
 
-2. Start the Services: Use the following command to start the microservices defined in the docker-compose.yml file:
-   docker-compose up
+2. Start the Services: Use the following command to start the microservices defined in the docker-compose.dev.yml file:
+   docker-compose -f docker-compose.dev.yml up
+
+     The -f flag tells docker-compose to use a specific file. In this case, it's a file solely used for development. You might ask why: This setup of docker points the docker container to the application we're   
+     running locally while still using all the dependencies and java version created in the image. This gives us the advantage of steady dependency management but allows us to develop locally and easily share 
+     with others.
 
    This command will build the images (if not already built) and start the containers for each microservice.
 
-3. Accessing services: Each service can be accessed at the port defined in the docker-compose.yml file
+4. Accessing services: Each service can be accessed at the port defined in the docker-compose.yml file
 
-4. Hot Reloading: Changes made to the source code in the gateway-api or identity-service folders will automatically be reflected in the running containers due to the volume mounts defined in the docker-compose.yml file. This allows for a smoother development experience without needing to rebuild the containers.
+5. Hot Reloading: Changes made to the source code in the gateway-api or identity-service folders will automatically be reflected in the running containers due to the volume mounts defined in the docker-compose.yml file. This allows for a smoother development experience without needing to rebuild the containers.
 
 ### Docker Compose commands:
 
