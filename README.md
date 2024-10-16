@@ -53,7 +53,10 @@ Once initial setup is complete, you can begin developing with Docker Compose. He
    
    cd C:\Users\<YourUsername>\Desktop\microservices-dev
 
-2. Start the Services: Use the following command to start the microservices defined in the docker-compose.dev.yml file:
+2. Build the application using .\mvnw clean packages -DskipTests if this doesn't work go to Maven > lifecycle > package.
+
+
+3. Start the Services: Use the following command to start the microservices defined in the docker-compose.dev.yml file:
    docker-compose -f docker-compose.dev.yml up
 
      The -f flag tells docker-compose to use a specific file. In this case, it's a file solely used for development. You might ask why: This setup of docker points the docker container to the application we're   
